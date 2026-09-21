@@ -1,0 +1,2 @@
+../src/ram_dp.sv
+../src/RAM_DP_TB.sv

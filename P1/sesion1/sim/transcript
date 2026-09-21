@@ -1,0 +1,82 @@
+# //  Questa Sim-64
+# //  Version 2025.1_2 win64 Apr  7 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do Sim.do
+# 10
+# Sim: load design
+# vsim -voptargs="+acc" -msgmode both -assertdebug -wlfdeleteonquit work.FIFO_tb_v0 
+# Start time: 19:36:44 on Sep 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Warning: ../src/testbench.sv(3): (vopt-2605) empty port name in port list.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.FIFO_tb_v0(fast)
+# Loading work.FIFO_no_sintetizable(fast)
+# Sim: load wave-file(s)
+# 1
+# Sim: log signals
+# Sim: run ...
+# ** Info: INICIO VALIDACION
+#    Time: 0 ns  Scope: FIFO_tb_v0 File: ../src/testbench.sv Line: 48
+# Inicializacion de las entradas
+#  reset inicial
+# ** Info: *** TEST 1: Escritura simple
+#    Time: 97 ns  Scope: FIFO_tb_v0 File: ../src/testbench.sv Line: 51
+#  escribo dos valores
+# leo un valor
+# ** Info: *** FIN TEST 1 ****
+#    Time: 200 ns  Scope: FIFO_tb_v0 File: ../src/testbench.sv Line: 53
+# ** Info: *** TEST 2: LLenado simple de la FIFO
+#    Time: 200 ns  Scope: FIFO_tb_v0 File: ../src/testbench.sv Line: 57
+# 1
+add wave -position insertpoint  \
+sim:/FIFO_tb_v0/DEPTH \
+sim:/FIFO_tb_v0/WIDTH \
+sim:/FIFO_tb_v0/ADDRESS \
+sim:/FIFO_tb_v0/clock \
+sim:/FIFO_tb_v0/reset \
+sim:/FIFO_tb_v0/rden \
+sim:/FIFO_tb_v0/wren \
+sim:/FIFO_tb_v0/clear \
+sim:/FIFO_tb_v0/data_in \
+sim:/FIFO_tb_v0/use_dw \
+sim:/FIFO_tb_v0/rdaddress \
+sim:/FIFO_tb_v0/wraddress \
+sim:/FIFO_tb_v0/full \
+sim:/FIFO_tb_v0/empty \
+sim:/FIFO_tb_v0/data_out \
+sim:/FIFO_tb_v0/FIFO_ideal \
+sim:/FIFO_tb_v0/FIFO_ideal_mbox \
+sim:/FIFO_tb_v0/palabras
+# (vsim-4027) Logging is not supported for Queue item: /FIFO_tb_v0/FIFO_ideal
+# (vsim-4027) Logging is not supported for SVMailbox item: /FIFO_tb_v0/FIFO_ideal_mbox
+add wave -position insertpoint  \
+sim:/FIFO_tb_v0/DEPTH \
+sim:/FIFO_tb_v0/WIDTH \
+sim:/FIFO_tb_v0/ADDRESS \
+sim:/FIFO_tb_v0/clock \
+sim:/FIFO_tb_v0/reset \
+sim:/FIFO_tb_v0/rden \
+sim:/FIFO_tb_v0/wren \
+sim:/FIFO_tb_v0/clear \
+sim:/FIFO_tb_v0/data_in \
+sim:/FIFO_tb_v0/use_dw \
+sim:/FIFO_tb_v0/rdaddress \
+sim:/FIFO_tb_v0/wraddress \
+sim:/FIFO_tb_v0/full \
+sim:/FIFO_tb_v0/empty \
+sim:/FIFO_tb_v0/data_out
+# End time: 19:38:42 on Sep 15,2026, Elapsed time: 0:01:58
+# Errors: 0, Warnings: 2
