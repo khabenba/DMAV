@@ -1,2 +1,5 @@
 ../src/design.sv
-../src/testbench.sv
+../src/utilidades_pkg.sv
+../src/FIFO_if.sv
+../src/FIFO_top_duv.sv
+../src/fifo_tb.sv

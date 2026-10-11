@@ -11,7 +11,7 @@ puts -nonewline "Por favor, ingresa nombre del top: "
 flush stdout
 gets stdin top
 # Define top entity of the design
-# set top RAM_DP_vlg_tst
+#set top fifo_tb
 
 # Load design into simulation
 echo "Sim: load design"
@@ -27,7 +27,7 @@ log -r /*
 
 # Run simulation
 echo "Sim: run ..."
-run 1200 ns
+run -all
 
 # Restore wave file.
 # This can be used to restore cursor and view position
