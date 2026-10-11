@@ -18,11 +18,16 @@ class FIFO_Testaleatorio1 #(
     $display("*** TEST ALEATORIO 1: inicio");
     env.driver.reset_asincrono();
 
-    // OBSERVABILIDAD: lanzamos los dos bucles infinitos en paralelo.
+    // OBSERVABILIDAD: lanzamos los bucles infinitos en paralelo.
     // join_none: los deja corriendo y seguimos con las lineas de abajo sin esperar
     fork
-      env.monitor.monitorizar();       // 1o: captura señales y las manda por el mailbox
-      env.monitor.cov.cobertura();     // 2o: recoge del mailbox y muestrea el covergroup
+      // Cobertura
+      env.monitor.monitorizar();              // captura señales y las manda a la cobertura
+      env.monitor.cov.cobertura();            // recoge del mailbox y muestrea el covergroup
+      // Scoreboard
+      env.monitor.monitorizar_scoreboard();   // manda entradas y salidas al scoreboard
+      env.monitor.sb.predictor_resultados();  // calcula las salidas esperadas
+      env.monitor.sb.comparar_resultados();   // compara obtenidas con esperadas
     join_none
 
     // 1. Llenar la FIFO del todo y quedarse un rato en el limite de llena
@@ -38,7 +43,15 @@ class FIFO_Testaleatorio1 #(
         env.driver.bajar($urandom_range(1, DEPTH));
     end
 
+    // Un par de ciclos mas para que el scoreboard compare las ultimas operaciones
+    env.driver.reposo();
+    env.driver.reposo();
+
     $display("*** TEST ALEATORIO 1: fin");
+
+    // Resultado del scoreboard
+    $display("Scoreboard: %0d comparaciones, %0d errores",
+             env.monitor.sb.n_comparaciones, env.monitor.sb.n_errores);
 
     // Resultado de la cobertura funcional (paso 6)
     $display("Cobertura del covergroup  = %0.2f%%", env.monitor.cov.fifo_cover.get_coverage());

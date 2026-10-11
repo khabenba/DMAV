@@ -1,5 +1,4 @@
 BEGIN 3:fifo_if:fast__2:work
-    data_in :  1:FIFO_top_duv:fast:work
     data_out :  1:FIFO_top_duv:fast:work
     lleno :  1:FIFO_top_duv:fast:work
     rst_s :  1:FIFO_top_duv:fast:work
@@ -9,6 +8,7 @@ BEGIN 3:fifo_if:fast__2:work
     rd_en :  1:FIFO_top_duv:fast:work
     use_dw :  1:FIFO_top_duv:fast:work
     clk :  1:FIFO_top_duv:fast:work
+    data_in :  1:FIFO_top_duv:fast:work
 END 
 BEGIN 1:fifo_tb:fast:work
     test :  1:fifo_tb:fast:work
