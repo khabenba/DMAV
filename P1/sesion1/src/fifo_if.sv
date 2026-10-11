@@ -55,8 +55,22 @@ modport duv (
  
 //4.1 definición clocking px
 //añadir vuestro código, solo necesario para la segunda sesion
+// Monitoriza TODAS las señales: todas son inputs y se muestrean 1 ns antes del flanco de subida
+clocking px @(posedge clk);
+ 
+  input #1ns      rst_a;
+  input #1ns      rst_s;
+  input #1ns      lleno;
+  input #1ns      vacio;
+  input #1ns      rd_en;
+  input #1ns      wr_en;
+  input #1ns      use_dw;
+  input #1ns      data_in;
+  input #1ns      data_out;
+endclocking:px;
  
 //5.2 definición del modport monitor
 //añadir vuestro código, solo necesario para la segunda sesion
+modport monitor (clocking px);
  
 endinterface

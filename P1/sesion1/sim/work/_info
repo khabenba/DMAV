@@ -1,15 +1,27 @@
 m255
 K4
 z2
-Z0 !s12c _opt
+Z0 !s12c _opt1
 Z1 !s99 nomlopt
 R0
 R1
-!s12c _opt2
-R1
-!s12c _opt1
+R0
 R1
 R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt
+R1
+R2
+R1
+!s12c _opt2
+R1
+R0
+R1
+R2
 R1
 !s11f vlog 2025.1_2 2025.04, Apr  7 2025
 13
@@ -18,138 +30,138 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z2 dW:/MUISE/DMAV/P1/sesion1/sim
+Z3 dW:/MUISE/DMAV/P1/sesion1/sim
 T_opt
 !s110 1790702211
 VIBVU7Z43hO[A8CVVX4glY3
 04 10 4 work FIFO_tb_v0 fast 0
 =1-cc96e51dd680-6abbf281-249-44b8
 R1
-Z3 !s12f OEM100
-Z4 !s12b OEM100
-Z5 !s124 OEM100
-Z6 !s135 nogc
-Z7 o-quiet -auto_acc_if_foreign -work work +acc
-Z8 tCvgOpt 0 defaultOptions 1107178788
+Z4 !s12f OEM100
+Z5 !s12b OEM100
+Z6 !s124 OEM100
+Z7 !s135 nogc
+Z8 o-quiet -auto_acc_if_foreign -work work +acc
+Z9 tCvgOpt 0 defaultOptions 1107178788
 n@_opt
-Z9 OL;O;2025.1_2;82
-T_opt1
-!s11d utilidades_pkg C:/Users/Jaime/Desktop/MUISE/2/DMAV/P1/sesion1/sim/work 1 fifo_if 1 C:/Users/Jaime/Desktop/MUISE/2/DMAV/P1/sesion1/sim/work 
-!s110 1790619022
-V`C9_RCZac1QS;Deg12B@01
-Z10 04 7 4 work fifo_tb fast 0
-=1-f8ac6559a8c6-6abaad8d-29e-48dc
-R1
+Z10 OL;O;2025.1_2;82
 R3
+T_opt1
+!s11d utilidades_pkg C:/Users/Jaime/Desktop/DMAV/P1/sesion1/sim/work 1 fifo_if 1 C:/Users/Jaime/Desktop/DMAV/P1/sesion1/sim/work 
+!s110 1791706514
+VNi^VANO6M[RA@^:ic?V>:3
+Z11 04 7 4 work fifo_tb fast 0
+=1-f8ac6559a8c6-6acb4590-2b6-4450
+R1
 R4
 R5
 R6
 R7
 R8
-n@_opt1
 R9
-R2
+n@_opt1
+R10
 T_opt2
 !s11d utilidades_pkg W:/MUISE/DMAV/P1/sesion1/sim/work 1 fifo_if 1 W:/MUISE/DMAV/P1/sesion1/sim/work 
 !s110 1790700523
 VRja<0A3COVeFjC_>J6aJT0
-R10
+R11
 =1-cc96e51dd680-6abbebe9-394-2f10
 R1
-R3
 R4
 R5
 R6
 R7
 R8
-n@_opt2
 R9
-R2
+n@_opt2
+R10
+R3
 Yfifo_if
 2../src/FIFO_if.sv
-Z11 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-Z12 !s110 1790701381
+Z12 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z13 !s110 1791706500
 !i10b 1
-!s100 z1L6W<obWaTAN?zSiVPHd3
-IGlWT1FfC4=8H9]<9h=?dV3
+!s100 EbhDN=8g8k@RET@i`O70R1
+ISFWFm9MFbo89IU^`L:8?a2
 S1
-R2
-w1790616945
+Z14 dC:/Users/Jaime/Desktop/DMAV/P1/sesion1/sim
+w1791705103
 8../src/FIFO_if.sv
 F../src/FIFO_if.sv
-!i122 52
+!i122 105
 L0 6 0
-Z13 VDg1SIo80bB@j0V0VzS_@n1
-Z14 OL;L;2025.1_2;82
+Z15 VDg1SIo80bB@j0V0VzS_@n1
+Z16 OL;L;2025.1_2;82
 r1
 !s85 0
 31
-Z15 !s108 1790701381.000000
+Z17 !s108 1791706500.000000
 !s107 ../src/FIFO_if.sv|
 !s90 +incdir+../src|-quiet|../src/FIFO_if.sv|-work|work|-lint|
 !i113 0
-Z16 o-quiet -work work -lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z17 !s92 -quiet +incdir+../src -work work -lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z18 tCvgOpt 0 defaultOptions 1085220168
+Z18 o-quiet -work work -lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z19 !s92 -quiet +incdir+../src -work work -lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z20 tCvgOpt 0 defaultOptions 1085220168
 vFIFO_no_sintetizable
 2../src/design.sv
-R11
-Z19 !s110 1790702195
+R12
+R13
 !i10b 1
 !s100 DRAkY20SR1d8Ydj<M^2jn1
 I5oO=GF6Y1FWf;VDH9I_;P3
 S1
-R2
+R14
 w1789490715
 8../src/design.sv
 F../src/design.sv
-!i122 61
+!i122 103
 L0 1 68
-R13
-R14
+R15
+R16
 r1
 !s85 0
 31
-Z20 !s108 1790702195.000000
+R17
 !s107 ../src/design.sv|
 !s90 +incdir+../src|-quiet|../src/design.sv|-work|work|-lint|
 !i113 0
-R16
-R17
 R18
+R19
+R20
 n@f@i@f@o_no_sintetizable
 vfifo_tb
 Z21 2../src/fifo_tb.sv
-R11
-Z22 DXx4 work 14 utilidades_pkg 0 22 9bOOF_9hTbRhH7haCMZzf2
+R12
+Z22 DXx4 work 14 utilidades_pkg 0 22 ]9UgQl<C10O_ZLdl;><ZC1
 DXx4 work 15 fifo_tb_sv_unit 0 22 oI5jizKbzZln254Goz78G3
-Z23 !s110 1790701382
-R13
+Z23 !s110 1791706501
+R15
 r1
 !s85 0
 !i10b 1
-!s100 F<nh?e0^_olZz1X[V[?jW2
-I@?<RCjE:EZ8KKfc]=P4mn0
+!s100 0no2BoZU?N6zFJ[:Kcg1V2
+I6@DfNC92Sh:J[il@15WV;0
 !s105 fifo_tb_sv_unit
 S1
-R2
-Z24 w1790618187
+R14
+Z24 w1791705849
 Z25 8../src/fifo_tb.sv
 Z26 F../src/fifo_tb.sv
-!i122 54
+!i122 107
 L0 3 39
-R14
+R16
 31
-Z27 !s108 1790701382.000000
+Z27 !s108 1791706501.000000
 Z28 !s107 ../src/fifo_tb.sv|
 Z29 !s90 +incdir+../src|-quiet|../src/fifo_tb.sv|-work|work|-lint|
 !i113 0
-R16
-R17
 R18
+R19
+R20
 Xfifo_tb_sv_unit
 R21
-R11
+R12
 R22
 R23
 VoI5jizKbzZln254Goz78G3
@@ -160,64 +172,64 @@ r1
 IoI5jizKbzZln254Goz78G3
 !i103 1
 S1
-R2
+R14
 R24
 R25
 R26
-!i122 54
+!i122 107
 L0 2 0
-R14
+R16
 31
 R27
 R28
 R29
 !i113 0
-R16
-R17
 R18
+R19
+R20
 vFIFO_tb_v0
 2../src/testbench.sv
-R11
-R19
+R12
+!s110 1790702195
 !i10b 1
 !s100 E5:EK;C;GeeWeF63d[aQI0
 I29D:7<z:WcSP=g=KJcRJ;3
 S1
-R2
+R3
 w1790702178
 8../src/testbench.sv
 F../src/testbench.sv
 !i122 62
 L0 3 319
-R13
-R14
+R15
+R16
 r1
 !s85 0
 31
-R20
+!s108 1790702195.000000
 !s107 ../src/testbench.sv|
 !s90 +incdir+../src|-quiet|../src/testbench.sv|-work|work|-lint|
 !i113 0
-R16
-R17
 R18
+R19
+R20
 n@f@i@f@o_tb_v0
 vFIFO_top_duv
 2../src/FIFO_top_duv.sv
-R11
+R12
 R23
 !i10b 1
 !s100 O4j<Bh:Da^TA`6JMblB[@3
 Ii1K1ignU?IjFBZBHONh4;2
 S1
-R2
+R14
 w1790700491
 8../src/FIFO_top_duv.sv
 F../src/FIFO_top_duv.sv
-!i122 53
+!i122 106
 L0 1 23
-R13
-R14
+R15
+R16
 r1
 !s85 0
 31
@@ -225,40 +237,44 @@ R27
 !s107 ../src/FIFO_top_duv.sv|
 !s90 +incdir+../src|-quiet|../src/FIFO_top_duv.sv|-work|work|-lint|
 !i113 0
-R16
-R17
 R18
+R19
+R20
 n@f@i@f@o_top_duv
 Xutilidades_pkg
+!i114 1
 2../src/utilidades_pkg.sv
 !s115 fifo_if
-R11
 R12
+R13
 !i10b 1
-!s100 HQ:RWL0VkUV5PTV7UVhzE1
-I9bOOF_9hTbRhH7haCMZzf2
+!s100 H>:iJT2]IRn_XTcdVESNR0
+I]9UgQl<C10O_ZLdl;><ZC1
 S1
-R2
-w1790700444
+R14
+w1791706493
 8../src/utilidades_pkg.sv
 F../src/utilidades_pkg.sv
 F../src/RCSG_base.sv
 F../src/RCSG_subir.sv
 F../src/RCSG_bajar.sv
+F../src/FIFO_Transaction.sv
 F../src/FIFO_Enviroment.sv
 F../src/FIFO_Driver.sv
+F../src/FIFO_Coverage.sv
+F../src/FIFO_Monitor.sv
 F../src/FIFO_Testaleatorio1.sv
-!i122 51
+!i122 104
 L0 5 0
-V9bOOF_9hTbRhH7haCMZzf2
-R14
+V]9UgQl<C10O_ZLdl;><ZC1
+R16
 r1
 !s85 0
 31
-R15
-!s107 ../src/FIFO_Testaleatorio1.sv|../src/FIFO_Driver.sv|../src/FIFO_Enviroment.sv|../src/RCSG_bajar.sv|../src/RCSG_subir.sv|../src/RCSG_base.sv|../src/utilidades_pkg.sv|
+R17
+!s107 ../src/FIFO_Testaleatorio1.sv|../src/FIFO_Monitor.sv|../src/FIFO_Coverage.sv|../src/FIFO_Driver.sv|../src/FIFO_Enviroment.sv|../src/FIFO_Transaction.sv|../src/RCSG_bajar.sv|../src/RCSG_subir.sv|../src/RCSG_base.sv|../src/utilidades_pkg.sv|
 !s90 +incdir+../src|-quiet|../src/utilidades_pkg.sv|-work|work|-lint|
 !i113 0
-R16
-R17
 R18
+R19
+R20

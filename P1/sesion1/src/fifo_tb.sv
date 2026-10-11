@@ -33,7 +33,7 @@ end
 FIFO_Testaleatorio1 #(.WIDTH(DATA_WIDTH), .DEPTH(DEPTH)) test;
 
 initial begin
-  test = new(bus);            // le pasamos el interfaz; el modport ya va en el constructor
+  test = new(bus, bus);            // le pasamos el interfaz; el modport ya va en el constructor
   test.prueba_aleatoria();
   $stop;
 end

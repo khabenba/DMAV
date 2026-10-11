@@ -6,9 +6,16 @@ class RCSG_subir #(
 ) extends utilidades_pkg::RCSG_base #(WIDTH, DEPTH);   // heredamos pasando los mismos parametros
 
 // Constraint nueva: mientras la FIFO no este llena, solo escribimos
+  // constraint c_subir {
+  //   if (llenado < DEPTH) {           // si todavia cabe algo...
+  //     wr_rd == SOLO_ESCRITURA;       // ...obligamos a escribir
+  //   }
+  // }
+
   constraint c_subir {
-    if (llenado < DEPTH) {           // si todavia cabe algo...
-      wr_rd == SOLO_ESCRITURA;       // ...obligamos a escribir
+    if (llenado < DEPTH) {
+      wr_rd dist { SOLO_ESCRITURA  := 3,     // 3 de cada 4 veces: escribir
+                  LEER_Y_ESCRIBIR := 1 };   // 1 de cada 4: leer y escribir (no cambia el llenado)
     }
   }
 

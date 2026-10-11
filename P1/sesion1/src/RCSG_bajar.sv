@@ -8,10 +8,11 @@ class RCSG_bajar #(
 
 // Constraint nueva: mientras la FIFO no este vacia, solo leemos
   constraint c_bajar {
-    if (llenado > 0) {               // si todavia queda algo...
-      wr_rd == SOLO_LECTURA;         // ...obligamos a leer
-    }
+  if (llenado > 0) {
+    wr_rd dist { SOLO_LECTURA    := 3,     // 3 de cada 4 veces: leer
+                 LEER_Y_ESCRIBIR := 1 };   // 1 de cada 4: leer y escribir (no cambia el llenado)
   }
+}
 
 // Constructor: primero construimos la clase base
   function new();
