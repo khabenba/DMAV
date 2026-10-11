@@ -18,7 +18,37 @@ logic [4:0] wraddress;
 logic full,empty;                                              
 logic [WIDTH-1:0]  data_out;
   
-
+covergroup Cobertura_funcional @(posedge clock);
+    grado_llenado:coverpoint use_dw
+      {bins intermedio[] = {[1:31]};
+   bins corner_case_vacio ={0};
+   bins corner_case_lleno ={32};
+  }
+   
+    flags: coverpoint {empty,full}
+      {bins flag_vacio = {1};
+   bins flag_lleno = {2};
+   bins flag_intermedio = {3};
+   illegal_bins flags_no_posibles ={0};
+  }
+ 
+    rw:coverpoint {rden,wren}
+      {bins solo_lectura = {2};
+   bins solo_escritura = {1};
+   bins lectura_escritura= {3};
+   bins nada = default;
+  }
+/*      datos_entrada: coverpoint DATA_IN
+      {bins datos_posibles = {[0:19]};
+  // ignore_bins datos_no_posibles ={[20:255]};
+  }
+*/
+    estados_normales:cross grado_llenado, rw ;
+    casos_especiales:cross  rw, flags 
+      {bins casos_intermedios = binsof(flags.flag_intermedio);  
+       ignore_bins no_admisible = (binsof(flags.flag_lleno)&& binsof(rw.solo_escritura))|| (binsof(flags.flag_vacio)&& binsof(rw.solo_lectura));
+      }
+endgroup;
 
 
 //Modelo de la FIFO
@@ -35,11 +65,11 @@ FIFO_no_sintetizable DUV (.CLOCK(clock),
                .CLEAR_N(1'b1),
                .F_FULL_N(full),
                .F_EMPTY_N(empty),
-			   .USE_DW(use_dw),
+			         .USE_DW(use_dw),
                .DATA_OUT(data_out));
 
 
-
+Cobertura_funcional cbf=new();
 
 
 // Casos de Test	  
@@ -82,7 +112,7 @@ $info("*** FIN TEST 5 ****");
 
 repeat(5) @(posedge clock);
 $info("FIN VALIDACION");
-
+$display("Cobertura funcional total = %0.2f%%", $get_coverage());
 $stop;
 end
 

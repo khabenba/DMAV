@@ -1,0 +1,20 @@
+// Clase que hace que la FIFO se vaya LLENANDO.
+// "is a": un RCSG_subir ES UN RCSG_base con una constraint mas.
+class RCSG_subir #(
+    parameter int WIDTH = 32,
+    parameter int DEPTH = 16
+) extends utilidades_pkg::RCSG_base #(WIDTH, DEPTH);   // heredamos pasando los mismos parametros
+
+// Constraint nueva: mientras la FIFO no este llena, solo escribimos
+  constraint c_subir {
+    if (llenado < DEPTH) {           // si todavia cabe algo...
+      wr_rd == SOLO_ESCRITURA;       // ...obligamos a escribir
+    }
+  }
+
+// Constructor: primero construimos la clase base
+  function new();
+    super.new();                     // llama al new() de RCSG_base (clear = 1)
+  endfunction
+
+endclass

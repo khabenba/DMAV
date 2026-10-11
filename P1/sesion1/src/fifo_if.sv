@@ -3,7 +3,7 @@
 
 
 //cabecera del interfaz. Recorda con dos parámetros y un puerto de entrada
-interface #(WIDTH=8, DEPTH=32) fifo_if (input bit clk);
+interface fifo_if #(parameter WIDTH=8, parameter DEPTH=32) (input bit clk);
  
   localparam ADDRESS=$clog2(DEPTH);  
  
@@ -48,8 +48,9 @@ modport duv (
   input             wr_en    ,
   input             data_in  ,
   output            lleno    ,
+  output            vacio    ,
   output            use_dw   ,
-  output            data_out ,
+  output            data_out
 );
  
 //4.1 definición clocking px
