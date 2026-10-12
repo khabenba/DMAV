@@ -1,0 +1,46 @@
+# //  Questa Sim-64
+# //  Version 2025.1_2 win64 Apr  7 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do Sim.do
+# fifo_tb
+# Sim: load design
+# vsim -voptargs="+acc" -msgmode both -assertdebug -wlfdeleteonquit work.fifo_tb 
+# Start time: 21:15:09 on Oct 12,2026
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jmolale  Hostname: MICROE11  ProcessID: 21080
+#           Attempting to use alternate WLF file "./wlftdng1kd".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdng1kd
+# ** Note: (vsim-8009) Loading existing optimized design _opt3
+# Loading sv_std.std
+# Loading work.fifo_if(fast)
+# Loading work.utilidades_pkg(fast)
+# Loading work.fifo_tb_sv_unit(fast)
+# Loading work.fifo_tb(fast)
+# Loading work.fifo_if(fast__2)
+# Loading work.FIFO_top_duv(fast)
+# Loading work.FIFO_no_sintetizable(fast)
+# Sim: load wave-file(s)
+# 0
+# Sim: log signals
+# Sim: run ...
+# *** TEST ALEATORIO 1: inicio
+# *** TEST ALEATORIO 1: fin
+# Scoreboard: 437 comparaciones, 0 errores
+# Cobertura del covergroup  = 98.99%
+# Cobertura funcional total = 98.99%
+# ** Note: $stop    : ../src/fifo_tb.sv(38)
+#    Time: 10210 ns  Iteration: 2  Instance: /fifo_tb
+# Break in Module fifo_tb at ../src/fifo_tb.sv line 38
+# 1

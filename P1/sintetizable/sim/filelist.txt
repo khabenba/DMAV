@@ -1,0 +1,7 @@
+../src/counter.sv
+../src/ram_dp.sv
+../src/FIFO_FINAL.sv
+../src/utilidades_pkg.sv
+../src/FIFO_if.sv
+../src/FIFO_top_duv.sv
+../src/fifo_tb.sv
